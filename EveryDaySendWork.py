@@ -44,6 +44,8 @@ with open(file_path, 'r', encoding="utf-8") as file:
 
 for A in datas:
     if Today == A:
+        print(A)
+        print(Today)
         SendMessage(datas[A],Today)
         print("오늘의 할 일은 : '{}' 입니다.".format(datas[A]))
 

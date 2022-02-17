@@ -26,7 +26,7 @@ def Message():
     for A in datas:
         if Today == A:
             #SendMessage(datas[A],Today)
-            text = "오늘의 할 일은 : '{}' 입니다.".format(datas[A])
+            text = "오늘의 할 일은 : \n '{}' \n 입니다.".format(datas[A])
     if content == u"오늘의 메뉴":
         dataSend = {
             "version" : "2.0",
