@@ -106,11 +106,11 @@ for A in range(0, len(New_Str_Final_Day)):
         globals()['List_' + str(Str_Final_Day[A])] = []
         globals()['List_' + str(Str_Final_Day[A])].append(Final_Work[A])
     #print('List_' + str(Str_Final_Day[A]))
-    print(globals()['List_' + str(Str_Final_Day[A])])
+    #print(globals()['List_' + str(Str_Final_Day[A])])
     #print(globals()['List_' + str(Str_Final_Day[A])])
     #print(Str_Final_Day.index(str(Str_Final_Day[A])))
     
-    List_Names[str(New_Str_Final_Day[A])+ '_'] = globals()['List_' + str(Str_Final_Day[A])]
+    List_Names[str(New_Str_Final_Day[A])] = globals()['List_' + str(Str_Final_Day[A])]
 
 
 with open('UniversityClassList.json', 'w', encoding="utf-8") as make_file:
