@@ -12,7 +12,7 @@ import notion
 from datetime import timedelta, date
 
 #토큰 꼭 지우기
-token_v2 = '75e9552fa90925d9a4a34589807560afcaf61076c1174ffced17663455ca99a35131018a607b71df4498da3f409e54ec69ce915858ab15a9d16e0013514b714d6742ef8673a343ee7299d4a13ae8' # token == 비밀번호 라고 생각하면 됩니다. 
+token_v2 = '' # token == 비밀번호 라고 생각하면 됩니다. 
 client = NotionClient(token_v2=token_v2) 
 
 url = 'https://www.notion.so/python-notion-API-25afad8464354d03b33ae7dd208d6fbf' 

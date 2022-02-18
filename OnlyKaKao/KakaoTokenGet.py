@@ -3,7 +3,7 @@ import requests
 url = 'https://kauth.kakao.com/oauth/token'
 rest_api_key = '278b46cb95003dddfae9fa19f0f53338'
 redirect_uri = 'https://example.com/oauth'
-authorize_code = 'W9DVe-lIrXkOewGCIIAuSIQObtfy38oRTATULOKbYCnh11h5BaSjvDgZd1Bq7dHAaLbD2AorDKYAAAF-3BYOcA'
+authorize_code = 'W9DVe-lIrXkOewGCIIAuSIQObtfy38oRTATULOKbYCnh11h5BaSjvDgZd1Bq7dHAaLbD2AorDKYAAAF-3BYOc' + 'A'
 
 data = {
     'grant_type':'authorization_code',

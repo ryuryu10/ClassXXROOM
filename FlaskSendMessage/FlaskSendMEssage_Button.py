@@ -23,14 +23,17 @@ with open(file_path, 'r', encoding="utf-8") as file:
 def Message():
     texts = ""
     content = request.get_json()
+    print(content['userRequest']['user']['id'])
     content = content['action']['name']
     #content=content.replace("\n","")
     #print(content)
     for A in datas:
         if Today == A:
             #SendMessage(datas[A],Today)
-            texts += str(datas[A]) + "\n"
-    print(texts)
+            texts = str(datas[A]).replace("[","").replace("]","").replace(",","\n-").replace("\'","") + "\n입니다."     #['2022뭐시기','2022년 뭐시기']
+    if texts == "":
+        texts = "존재하지 않습니다"
+    #print(texts)
     if content == u"테스트":
         dataSend = {
             "version" : "2.0",
@@ -38,7 +41,7 @@ def Message():
                 "outputs" : [
                     {
                         "simpleText" : {
-                            "text" : "오늘의 할 일은 : \n '{}' \n 입니다.".format(texts)
+                            "text" : "오늘의 할 일은 : \n-{}".format(texts)
                         }
                     }
                 ]
