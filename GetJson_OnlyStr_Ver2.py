@@ -94,12 +94,13 @@ New_Str_Final_Day = []
 for v in Str_Final_Day:
     if v not in New_Str_Final_Day:
         New_Str_Final_Day.append(v)
-
+'''
 for A in range(0, len(New_Str_Final_Day)):
     List_Names[str(New_Str_Final_Day[A])+ '_'] = ''
 #print(List_Names)
+'''
 
-for A in range(0, len(New_Str_Final_Day)):
+for A in range(0, len(Str_Final_Day)):
     try:
         globals()['List_' + str(Str_Final_Day[A])].append(Final_Work[A])
     except:
@@ -110,7 +111,7 @@ for A in range(0, len(New_Str_Final_Day)):
     #print(globals()['List_' + str(Str_Final_Day[A])])
     #print(Str_Final_Day.index(str(Str_Final_Day[A])))
     
-    List_Names[str(New_Str_Final_Day[A])] = globals()['List_' + str(Str_Final_Day[A])]
+    List_Names[str(Str_Final_Day[A])] = globals()['List_' + str(Str_Final_Day[A])]
 
 
 with open('UniversityClassList.json', 'w', encoding="utf-8") as make_file:

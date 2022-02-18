@@ -29,7 +29,7 @@ def Message():
     for A in datas:
         if Today == A:
             #SendMessage(datas[A],Today)
-            texts += datas[A] + "\n"
+            texts += str(datas[A]) + "\n"
     print(texts)
     if content == u"테스트":
         dataSend = {
